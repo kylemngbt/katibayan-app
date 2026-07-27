@@ -14,7 +14,37 @@ const FIRST_NAMES = [
   "Presentacion", "Encarnacion", "Asuncion", "Milagros", "Concepcion",
   "Guadalupe", "Cristopher", "Genevieve", "Ederson", "Marjorie", "Lourdes",
   "Nestor", "Erlinda", "Cielo", "Rustom", "Jonalyn", "Jhun", "Erwin",
-  "Analiza", "Rodel", "Fe", "Vergel", "Estelita", "Almira", "Danilo"
+  "Analiza", "Rodel", "Fe", "Vergel", "Estelita", "Almira", "Danilo",
+  "Carlo", "Carl", "Mark", "John", "John Paul", "Paul", "Paolo", "Patrick",
+  "Kevin", "Kenneth", "Bryan", "Brian", "Christian", "Christopher",
+  "Joshua", "Jerico", "Jericho", "Nathaniel", "Nathan", "Adrian", "Adrianne",
+  "Ryan", "Ryan James", "Ronald", "Rommel", "Ramil", "Ramon", "Renato",
+  "Alvin", "Alvin John", "Allen", "Aldrin", "Ariel", "Arnold", "Arthur",
+  "Albert", "Alberto", "Ben", "Benjamin", "Benedict", "Bonifacio", "Bong",
+  "Cesar", "Cyril", "Clyde", "Clark", "Dominic", "Donald", "Edgar",
+  "Edwin", "Efren", "Emmanuel", "Enrico", "Eric", "Francis", "Francisco",
+  "Frederick", "Gilbert", "Glenn", "Harold", "Henry", "Ian", "Ivan",
+  "Jake", "James", "Jason", "Jay", "Jaypee", "Jeffrey", "Jerwin", "Jessie",
+  "Joel", "Jonathan", "Jordan", "Julius", "Justin", "Kennedy", "Kent",
+  "Lester", "Leo", "Leonardo", "Louie", "Luis", "Marc", "Marco",
+  "Marvin", "Michael", "Miguel", "Nathan", "Noel", "Oliver", "Oscar",
+  "Patrick", "Philip", "Ralph", "Randy", "Raphael", "Richard", "Roberto",
+  "Romulo", "Samuel", "Sherwin", "Stephen", "Tomas", "Vincent", "Victor",
+  "Warren", "William", "Abigail", "Aileen", "Aimee", "Alexandra", "Alexa", "Alice", "Alicia",
+  "Amanda", "Angela", "Angelie", "April", "Ara", "Arianne", "Ashley",
+  "Bea", "Beatriz", "Belinda", "Bianca", "Camille", "Carla", "Catherine",
+  "Charlene", "Cherry", "Christine", "Clarissa", "Cristina", "Daisy",
+  "Danica", "Darlene", "Diana", "Donna", "Elaine", "Elena", "Elisa",
+  "Elizabeth", "Ella", "Erika", "Eunice", "Evangeline", "Flor", "Glenda",
+  "Hannah", "Hazel", "Irene", "Janice", "Jean", "Jenny", "Jessica",
+  "Joan", "Joanna", "Joyce", "Judith", "Julia", "Karen", "Kate",
+  "Katrina", "Kristel", "Liza", "Lorraine", "Lovely", "Lucille",
+  "Luzviminda", "Mae", "Maribel", "Maricel", "Maricris", "Marilou",
+  "Marilyn", "Marissa", "May", "Melissa", "Michelle", "Monica",
+  "Myra", "Nadine", "Nina", "Patricia", "Pauline", "Princess",
+  "Regina", "Rica", "Rosemarie", "Ruby", "Samantha", "Sarah",
+  "Shiela", "Sofia", "Sonia", "Theresa", "Trisha", "Vanessa",
+  "Veronica", "Victoria", "Yvonne"
 ];
 
 // Optional "second first name" pool — reflects the common Filipino
@@ -24,8 +54,20 @@ const SECOND_NAMES = [
   "Grace", "Joy", "Faith", "Rose", "Ann", "Anne", "Anthony", "Angel",
   "Marie", "Louise", "Claire", "Divine", "Justine", "Bernard", "Michael",
   "Gabriel", "Nicole", "Denise", "Kaye", "Mae", "Lynn", "Jane", "Paul",
-  "Ray", "Lee"
+  "Ray", "Lee", "Mae", "May", "Jean", "Jane", "Joyce", "Hope", "Love", "Pearl",
+  "Princess", "Rosemarie", "Rose Ann", "Rose Marie", "Kristine",
+  "Christine", "Michelle", "Patricia", "Marie Grace", "Marie Joy",
+  "Mae Ann", "Mae Rose", "Jeanette", "Lyn", "Lynne", "Mae Lynn",
+  "Mae Joy", "Mae Grace", "Mae Angel", "Angelica", "Lou", "Lou Ann",
+  "Louise", "Nicole", "Elaine", "Camille", "Therese", "Kate", "Katrina",
+  "Alexis", "John", "John Mark", "John Michael", "John Paul",
+  "John Lloyd", "Mark Anthony", "Mark Joseph", "Mark John",
+  "Paul John", "Paul Michael", "Carl", "Carl John", "Carl Anthony",
+  "James", "James Patrick", "Joshua", "Jerome", "Jericho",
+  "Kenneth", "Kevin", "Bryan", "Brian", "Christian", "Vincent",
+  "Francis", "Miguel", "Nathaniel", "Dominic", "Ryan", "Sean"
 ];
+
 
 const LAST_NAMES = [
   "Santos", "Reyes", "Cruz", "Bautista", "Ocampo", "Garcia", "Mendoza",
@@ -37,7 +79,21 @@ const LAST_NAMES = [
   "Galang", "Hernandez", "Ilagan", "Jimenez", "Katigbak", "Lopez",
   "Nepomuceno", "Olivar", "Perez", "Quiambao", "Rosales", "Sarmiento",
   "Tan", "Uy", "Valdez", "Ynares", "Zamora", "Bagsic", "Corpuz",
-  "Espiritu", "Formaran", "Gatchalian", "Hizon", "Isip", "Jaramillo"
+  "Espiritu", "Formaran", "Gatchalian", "Hizon", "Isip", "Jaramillo", "Aquino", "Alcantara", "Alvarez", "Andrada", "Aquino", "Atienza",
+  "Beltran", "Bernardo", "Borja", "Caballero", "Cabral", "Calderon",
+  "Camacho", "Campos", "Canlas", "Capili", "Carreon", "Castro",
+  "Chua", "Co", "Concepcion", "Contreras", "David", "De Castro",
+  "De Guzman", "De Leon", "De Jesus", "De Vera", "De Mesa",
+  "Delos Reyes", "Diaz", "Dumlao", "Evangelista", "Estrella",
+  "Fabian", "Francisco", "Galang", "Geronimo", "Go", "Gutierrez",
+  "Hipolito", "Javier", "Laurel", "Legaspi", "Lim", "Luna",
+  "Macapagal", "Macaraeg", "Magsaysay", "Malonzo", "Mallari",
+  "Mangubat", "Marquez", "Martin", "Martinez", "Matias", "Mercado",
+  "Miranda", "Morales", "Moreno", "Natividad", "Ortega", "Padilla",
+  "Pascual", "Pineda", "Ponce", "Recto", "Robles", "Rodriguez",
+  "Roxas", "Samson", "San Diego", "Sandoval", "Santiago", "Soriano",
+  "Suarez", "Tiu", "Trinidad", "Tuazon", "Valencia", "Vasquez",
+  "Ventura", "Vergara", "Villafuerte", "Villamor", "Yap", "Yu", "Mangubat", "Bermudo", "Antipolo"
 ];
 
 // Probability (0-1) that a generated name includes a second first name.
