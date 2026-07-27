@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Feature A test — random pickers</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+  button { padding: 8px 14px; margin-right: 8px; margin-bottom: 16px; cursor: pointer; }
+  ul { background: #f4f4f4; padding: 12px 12px 12px 28px; border-radius: 6px; max-height: 240px; overflow-y: auto; }
+  li { margin-bottom: 4px; font-family: ui-monospace, monospace; }
+  h2 { margin-top: 32px; }
+</style>
+</head>
+<body>
+  <h1>Feature A — data layer test</h1>
+  <p>This is just a throwaway test page to confirm the picker functions work before we build the real session UI in Feature B.</p>
+
+  <h2>Random Name</h2>
+  <button onclick="runTest('name')">Generate 5 names</button>
+  <ul id="name-output"></ul>
+
+  <h2>Random District / Local</h2>
+  <button onclick="runTest('district')">Generate 5 District/Local pairs</button>
+  <ul id="district-output"></ul>
+
+  <h2>Random Purok-Grupo</h2>
+  <button onclick="runTest('purok')">Generate 5 Purok-Grupo</button>
+  <ul id="purok-output"></ul>
+
+  <script src="data/names.js"></script>
+  <script src="data/districts.js"></script>
+  <script src="js/random-pickers.js"></script>
+  <script>
+    function runTest(kind) {
+      const outputEl = document.getElementById(`${kind === 'name' ? 'name' : kind === 'district' ? 'district' : 'purok'}-output`);
+      outputEl.innerHTML = "";
+      for (let i = 0; i < 5; i++) {
+        const li = document.createElement("li");
+        if (kind === "name") li.textContent = getRandomName().full;
+        if (kind === "district") li.textContent = getRandomDistrictAndLocal().display;
+        if (kind === "purok") li.textContent = getRandomPurokGrupo().display;
+        outputEl.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>
