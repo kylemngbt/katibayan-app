@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katibayan Practice</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="masthead">
+      <h1>Katibayan Practice</h1>
+      <p>Drill yourself on names, district/local, and purok–grupo before your next duty.</p>
+    </div>
+
+    <div class="progress" id="progress">
+      <div class="tick" data-step="1">I</div>
+      <div class="tick" data-step="2">II</div>
+      <div class="tick" data-step="3">III</div>
+    </div>
+
+    <div class="card" id="stage-idle">
+      <p class="helper">Each session gives you one random name, one District/Local pair, and one Purok–Grupo, one at a time &mdash; just like taking a real slip.</p>
+      <div class="actions">
+        <button class="btn-primary" id="start-btn">Start Session</button>
+      </div>
+    </div>
+
+    <div class="card hidden" id="stage-name">
+      <div class="eyebrow">Full Name</div>
+      <div class="data-display" id="name-display"></div>
+      <p class="helper">Write this down on paper as if the member just told you.</p>
+      <div class="actions">
+        <button class="btn-primary" id="name-proceed">Proceed &rarr;</button>
+      </div>
+    </div>
+
+    <div class="card hidden" id="stage-district">
+      <div class="eyebrow">District &amp; Local Congregation</div>
+      <div class="data-display" id="district-display"></div>
+      <div class="data-display secondary" id="local-display"></div>
+      <div class="actions">
+        <button class="btn-primary" id="district-proceed">Proceed &rarr;</button>
+      </div>
+    </div>
+
+    <div class="card hidden" id="stage-purok">
+      <div class="eyebrow">Purok &ndash; Grupo</div>
+      <div class="data-display" id="purok-display"></div>
+      <p class="helper">Write it as Purok&ndash;Grupo, e.g. 6-9.</p>
+      <div class="actions">
+        <button class="btn-primary" id="purok-proceed">Proceed &rarr;</button>
+      </div>
+    </div>
+
+    <div class="card hidden" id="stage-summary">
+      <div class="eyebrow">Summary &mdash; check against your paper</div>
+      <ul class="summary-list">
+        <li><span class="label">Name</span><span class="value" id="summary-name"></span></li>
+        <li><span class="label">District</span><span class="value" id="summary-district"></span></li>
+        <li><span class="label">Local Congregation</span><span class="value" id="summary-local"></span></li>
+        <li><span class="label">Purok &ndash; Grupo</span><span class="value" id="summary-purok"></span></li>
+      </ul>
+      <div class="actions">
+        <button class="btn-primary" id="new-session-btn">New Session</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/names.js"></script>
+  <script src="data/districts.js"></script>
+  <script src="js/random-pickers.js"></script>
+  <script src="js/session-app.js"></script>
+</body>
+</html>
