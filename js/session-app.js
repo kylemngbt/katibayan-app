@@ -31,20 +31,25 @@ function updateProgress(stage) {
 
 function beginSession() {
   session = { name: getRandomName() };
-  document.getElementById("name-display").textContent = session.name.full;
   showStage("name");
+  speak(session.name.full);
 }
 
 document.getElementById("start-btn").addEventListener("click", beginSession);
+
+document.getElementById("name-repeat-btn").addEventListener("click", () => speak(session.name.full));
+document.getElementById("name-spell-btn").addEventListener("click", () => spellOut(session.name.full));
 
 document.getElementById("name-proceed").addEventListener("click", () => {
   const dl = getRandomDistrictAndLocal();
   session.district = dl.district;
   session.local = dl.local;
-  document.getElementById("district-display").textContent = dl.district;
-  document.getElementById("local-display").textContent = dl.local;
   showStage("district");
+  speak(dl.district, dl.local);
 });
+
+document.getElementById("district-repeat-btn").addEventListener("click", () => speak(session.district, session.local));
+document.getElementById("district-spell-btn").addEventListener("click", () => spellOut(session.district, session.local));
 
 document.getElementById("district-proceed").addEventListener("click", () => {
   const pg = getRandomPurokGrupo();

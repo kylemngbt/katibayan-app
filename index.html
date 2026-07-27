@@ -20,7 +20,12 @@
     </div>
 
     <div class="card" id="stage-idle">
-      <p class="helper">Each session gives you one random name, one District/Local pair, and one Purok–Grupo, one at a time &mdash; just like taking a real slip.</p>
+      <p class="helper">Each session gives you one random name, one District/Local pair, and one Purok&ndash;Grupo, one at a time &mdash; just like taking a real slip. Names and District/Local are read aloud only, not shown on screen, until the summary.</p>
+      <div class="voice-picker">
+        <label for="voice-select">Voice</label>
+        <select id="voice-select"></select>
+      </div>
+      <p class="helper" id="voice-status" style="font-size:0.8rem;"></p>
       <div class="actions">
         <button class="btn-primary" id="start-btn">Start Session</button>
       </div>
@@ -28,8 +33,12 @@
 
     <div class="card hidden" id="stage-name">
       <div class="eyebrow">Full Name</div>
-      <div class="data-display" id="name-display"></div>
-      <p class="helper">Write this down on paper as if the member just told you.</p>
+      <div class="listen-indicator">&#128266; Listen, then write it on your slip</div>
+      <p class="helper">Didn't catch it? Use the buttons below.</p>
+      <div class="actions">
+        <button class="btn-secondary" id="name-repeat-btn">&#8635; Repeat</button>
+        <button class="btn-secondary" id="name-spell-btn">Spell It Out</button>
+      </div>
       <div class="actions">
         <button class="btn-primary" id="name-proceed">Proceed &rarr;</button>
       </div>
@@ -37,8 +46,12 @@
 
     <div class="card hidden" id="stage-district">
       <div class="eyebrow">District &amp; Local Congregation</div>
-      <div class="data-display" id="district-display"></div>
-      <div class="data-display secondary" id="local-display"></div>
+      <div class="listen-indicator">&#128266; Listen, then write it on your slip</div>
+      <p class="helper">Didn't catch it? Use the buttons below.</p>
+      <div class="actions">
+        <button class="btn-secondary" id="district-repeat-btn">&#8635; Repeat</button>
+        <button class="btn-secondary" id="district-spell-btn">Spell It Out</button>
+      </div>
       <div class="actions">
         <button class="btn-primary" id="district-proceed">Proceed &rarr;</button>
       </div>
@@ -70,6 +83,7 @@
   <script src="data/names.js"></script>
   <script src="data/districts.js"></script>
   <script src="js/random-pickers.js"></script>
+  <script src="js/speech.js"></script>
   <script src="js/session-app.js"></script>
 </body>
 </html>

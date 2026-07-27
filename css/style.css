@@ -132,6 +132,33 @@ body {
   margin-bottom: 28px;
 }
 
+.listen-indicator {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.voice-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.voice-picker select {
+  font-family: var(--font-sans);
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+  max-width: 260px;
+}
+
 .actions {
   display: flex;
   justify-content: center;
