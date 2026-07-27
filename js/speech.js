@@ -80,6 +80,12 @@ function speak(...texts) {
   texts.filter(Boolean).forEach((t) => window.speechSynthesis.speak(makeUtterance(t, 0.95)));
 }
 
+// Strips leading "District of " / "Local of " labels so only the
+// actual place name gets spelled out, not the label itself.
+function stripPlaceLabel(text) {
+  return text.replace(/^\s*(district|local)\s+of\s+/i, "");
+}
+
 // "Spell It Out" — reads each string letter by letter, with a short
 // pause between words.
 function spellOut(...texts) {
@@ -89,7 +95,8 @@ function spellOut(...texts) {
   }
   cancelSpeech();
   texts.filter(Boolean).forEach((t) => {
-    const spelled = t
+    const cleaned = stripPlaceLabel(t);
+    const spelled = cleaned
       .split(" ")
       .filter(Boolean)
       .map((word) => word.split("").join(", "))

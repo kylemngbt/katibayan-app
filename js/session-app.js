@@ -49,7 +49,8 @@ document.getElementById("name-proceed").addEventListener("click", () => {
 });
 
 document.getElementById("district-repeat-btn").addEventListener("click", () => speak(session.district, session.local));
-document.getElementById("district-spell-btn").addEventListener("click", () => spellOut(session.district, session.local));
+document.getElementById("district-spell-district-btn").addEventListener("click", () => spellOut(session.district));
+document.getElementById("district-spell-local-btn").addEventListener("click", () => spellOut(session.local));
 
 document.getElementById("district-proceed").addEventListener("click", () => {
   const pg = getRandomPurokGrupo();
